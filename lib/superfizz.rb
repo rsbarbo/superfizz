@@ -1,35 +1,40 @@
 class SuperFizz
 
-numbers = (1..1000)
+  num = 0
 
-numbers.each do |num|
-if num %3 == 0 && num %5 == 0 && num %7 == 0
-puts "SuperFizzBuzz"
-elsif num %3 == 0 && num %7 == 0
-puts "SuperFizz"
-elsif num %5 == 0 && num %7 == 0
-puts "SuperBuzz"
-elsif num %3 == 0 && num %5 == 0
-puts "FizzBuzz"
-elsif num %3 == 0
-    puts "Fizz"
-  elsif num %5 == 0
-    puts "Buzz"
-  elsif num %7 == 0
-    puts "Super"
-  else
-    num
+  while num <= 1000
+    if num % 3 == 0 && num % 5 == 0 && num % 7 == 0
+      puts "SuperFizzBuzz"
+    elsif num % 3 == 0 && num % 7 == 0
+      puts "SuperFizz"
+    elsif num % 5 == 0 && num % 7 == 0
+      puts "SuperBuzz"
+    elsif num % 3 == 0 && num % 5 == 0
+      puts "FizzBuzz"
+    elsif num % 3 == 0
+      puts "Fizz"
+    elsif num % 5 == 0
+      puts "Buzz"
+    elsif num % 7 == 0
+      puts "Super"
+    else
+      puts num
+    end
+    num += 1
   end
-end
 
-  numbers.each do |num|
-    puts "SuperFizzBuzz" if num %3 == 0 && num %5 == 0 && num %7 == 0
-    puts "SuperFizz" if num %3 == 0 && num %7 == 0
-    puts "SuperBuzz" if num %5 == 0 && num %7 == 0
-    puts "FizzBuzz" if num %3 == 0 && num %5 == 0
-    puts "Fizz" if num %3 == 0
-    puts "Buzz" if num %5 == 0
-    puts "Super" if num %3 == 0
+  while num <= 1000
+    case
+      puts "SuperFizzBuzz" when num % 3 == 0 && num % 5 == 0 && num % 7 == 0
+      puts "SuperFizz"     when num % 3 == 0 && num % 7 == 0
+      puts "SuperBuzz"     when num % 5 == 0 && num % 7 == 0
+      puts "FizzBuzz"      when num % 3 == 0 && num % 5 == 0
+      puts "Fizz"          when num % 3 == 0
+      puts "Buzz"          when num % 5 == 0
+      puts "Super"         when num % 7 == 0
+    else puts num
+    end
+    num += 1
   end
 
 end
